@@ -11,5 +11,4 @@ class Pembayaran extends Model
         return $this->belongsTo(CalonMahasiswa::class);
     }
 
-
 }

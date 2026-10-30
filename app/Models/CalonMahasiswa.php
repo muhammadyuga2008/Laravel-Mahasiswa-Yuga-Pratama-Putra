@@ -12,7 +12,7 @@ class CalonMahasiswa extends Model
     }
 
      public function Pembayaran(){
-        return $this->belongsTo(Pembayaran::class);
+        return $this->hasOne(Pembayaran::class);
     }
      public function User(){
         return $this->belongsTo(User::class);

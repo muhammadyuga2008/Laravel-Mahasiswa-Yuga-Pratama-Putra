@@ -13,13 +13,9 @@ return new class extends Migration
     {
         Schema::create('pembayarans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('calon_mahasiswa_id')->constrained('calon_mahasiswas');
-            $table->string('nama_lengkap');
-            $table->foreignId('fakultas_id')->constrained('fakultas');
-            $table->string('nama_fakultas');
-            $table->foreignId('program_studi_id')->constrained('program_studis');
-            $table->string('nama_prodi');
+            $table->foreignId('calon_mahasiswa_id')->constrained('calon_mahasiswas');   
             $table->enum('status_pembayaran',['pending','approved','reject']);
+            $table->string('bukti_pembayaran');
             $table->integer('total_pembayaran');
             $table->timestamps();
         });
